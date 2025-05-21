@@ -1,2 +1,3 @@
 # SQL-projects
-All the SQL Projects 
+All the SQL Projects done till date.
+
