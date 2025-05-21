@@ -1,0 +1,55 @@
+select version();
+
+select 5*3;
+
+select 5+9+6;
+
+select 5*(9+6);
+
+select * from movies;
+ show database;
+# to delete table either enter statement drop table or simply go to tables delete there itself;
+
+insert into movies(movie_id, movie_name, movie_genre, imdb_rating)
+values (101, 'The Shawshank Redemption', 'Drama', 9.3),
+(102, 'The Godfather', 'Crime Drama', 9.2),
+(103, 'The Dark Knight', 'Action Crime Drama', 9.0),
+(104, 'The Godfather Part II','Crime Drama',9.0),
+(105, '12 Angry Men', 'Crime Drama', 9.0),
+(106, 'Schindlers List', 'Biography-Drama', 9.0),
+(107, 'The Lord of the Rings','Action Adventure', 9.0),
+(108, 'Pulp Fiction', 'Crime Drama', 9.0);
+
+select * from movies;
+
+update movies
+set movie_genre = 'Inspiring-Drama'
+where movie_id = 101;
+
+select * from movies;
+
+delete from movies where movie_id = 107;
+
+select * from movies;
+
+
+select * from movies where 
+imdb_rating > 9.0;
+
+select * from movies where movie_genre = 'Crime Drama';
+
+select * from movies where 
+imdb_rating between 9.0 and 9.5;
+
+select movie_name, movie_genre from movies where imdb_rating <= 9.0;
+
+select movie_name, movie_genre, imdb_rating from movies where imdb_rating <= 9.0;
+
+select movie_name, movie_genre, imdb_rating from movies where imdb_rating >= 9.0;
+
+select * from movies where imdb_rating in (9.0,9.2);
+
+
+
+
+
